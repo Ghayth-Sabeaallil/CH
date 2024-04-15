@@ -1,28 +1,15 @@
 import "./App.css";
-import Button from "./Components/Button";
-import { useCounter } from "./Hooks/useCounter";
+import Counter from "./Components/Counter";
 
 function App() {
-  const [x, incrementX, decrementX, reset, max, min, evenOdd, type, plus3, min2] = useCounter() as any;
 
   return (
     <>
-      <div className="center">
-        <h1>HOOKS</h1>
-        <p>{x}</p>
-        <div className="btn">
-          <Button handleClick={incrementX} test={"+"} />
-          <Button handleClick={decrementX} test={"-"} />
-          <Button handleClick={reset} test={"Reset"} />
-          <Button handleClick={max} test={"Max"} />
-          <Button handleClick={min} test={"Min"} />
-          <Button handleClick={evenOdd} test={"Odd / Even"} />
-          <Button handleClick={plus3} test={"+3"} />
-          <Button handleClick={min2} test={"-2"} />
+      <Counter start={4} minV={-50} maxV={50} plus={3} minus={7} />
+      <Counter start={16} minV={-100} maxV={75} plus={10} minus={14} />
+      <Counter start={-5} minV={-23} maxV={30} plus={9} minus={9} />
 
-        </div>
-        <p>{type}</p>
-      </div>
+
     </>
   );
 }
