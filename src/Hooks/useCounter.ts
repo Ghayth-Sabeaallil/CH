@@ -33,7 +33,7 @@ export const useCounter = ({ start, minV, maxV, plus, minus }: useCounterProps) 
         }
     };
     const reset: React.MouseEventHandler<HTMLButtonElement> = () => {
-        setX(0);
+        setX(start);
     };
     const plus3: React.MouseEventHandler<HTMLButtonElement> = () => {
         if (x <= (maxV - plus)) {
