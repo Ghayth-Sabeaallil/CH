@@ -22,25 +22,25 @@ export const useCounter = ({ start, minV, maxV, plus, minus }: useCounterProps) 
     }, [x]);
 
 
-    const incrementX: React.MouseEventHandler<HTMLButtonElement> = () => {
+    const incrementX: React.MouseEventHandler<HTMLButtonElement> = (): void => {
         if (x < maxV) {
             setX((x) => x + 1);
         }
     };
-    const decrementX: React.MouseEventHandler<HTMLButtonElement> = () => {
+    const decrementX: React.MouseEventHandler<HTMLButtonElement> = (): void => {
         if (x > -1) {
             setX((x) => x - 1);
         }
     };
-    const reset: React.MouseEventHandler<HTMLButtonElement> = () => {
+    const reset: React.MouseEventHandler<HTMLButtonElement> = (): void => {
         setX(start);
     };
-    const plus3: React.MouseEventHandler<HTMLButtonElement> = () => {
+    const plus3: React.MouseEventHandler<HTMLButtonElement> = (): void => {
         if (x <= (maxV - plus)) {
             setX((x) => x + plus);
         }
     };
-    const min2: React.MouseEventHandler<HTMLButtonElement> = () => {
+    const min2: React.MouseEventHandler<HTMLButtonElement> = (): void => {
         if (x >= (minV + minus)) {
             setX((x) => x - minus);
         }
